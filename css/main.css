@@ -17,11 +17,12 @@ header{
     display: flex;
     justify-content: space-between;
     color: #fff;
- padding-bottom: 20px;
+ padding-top: 30px;
     margin-bottom: 80px;
     position: relative;
     overflow: hidden;
 }
+
 .hiden-nav {
     width: 20px;
     height: 20px;
@@ -42,13 +43,14 @@ header{
     color: #fff;
 }
 .sacand-nav {
-    width: 100%;
-    height: 40px;
-    background-color: #111;
-    margin-top: -80px;
-    margin-bottom: 100px;
-   padding-top: 10px;
+    width: 110px;
+    height: 140px;
    visibility: hidden;
+   position: absolute;
+   background-color: #111;
+   top: 30px;
+   right: 50px;
+   border-radius: 10px;
 }
 .visible{
     visibility:visible
@@ -56,14 +58,23 @@ header{
 .sacand-nav ul{
     list-style: none;
     text-decoration: none;
-    display: flex;
-    justify-content: space-evenly;
+  
+}
+.sacand-nav ul li {
+    margin: 10px 0 5px 10px;
+    text-align: center;
+    color: #fff;
+}
+.sacand-nav ul li:hover{
+   
+    color: aqua;
+    
 }
 .sacand-nav ul li a{
     text-decoration: none;
-    color: #fff;
+    color: inherit;
     margin-right: 15px;
-    font-size: 12px;
+    font-size: 14px;
 }
 .logo {
     margin-left: 20px;
@@ -114,6 +125,7 @@ overflow: hidden;
 display: none;
 position: relative;
 box-shadow:  5px 5px 8px 0 aquamarine;
+text-align:left ;
 }
 .container div video, header div video{
     width: 100%;
@@ -124,22 +136,22 @@ box-shadow:  5px 5px 8px 0 aquamarine;
 }
 
 .container h2{
-   padding: 50px 0 0 100px;
+   padding: 50px 0 0 0px;
     color: #fff;
     font-size: 40px;
     display: none;
 }
-.container span {
+.container p span {
     font-size: 35px;
-    padding-left: 100px;
-    color: #fff;
-    display: none;
+
+    color: aqua;
+   
 }
 .container p {
     color: #fff;
     font-size: 30px;
     display: none;
-    margin-left: 100px;
+    
 }
 .container span{
     font-size: 35px;
@@ -166,6 +178,7 @@ box-shadow:  5px 5px 8px 0 aquamarine;
 .profile img{
     width: 200%;
     margin-left: -160px;
+   
 }
 /*end profile*/
 /*start skills*/
