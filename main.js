@@ -24,7 +24,8 @@ $(document).ready(function(){
     });
     
     $('.hiden-nav').click(function(){
-        $('.sacand-nav').toggleClass('visible')
+        $('.sacand-nav').toggleClass('visible');
+
  })
    
 $('header div ul li a').click(function(){
@@ -95,7 +96,7 @@ if( dw > 1080){
         'top': '0',
         'font-weight': 'bold',
         'border-radius': '50px'
-    }),$('.container div video').css({
+    }),$('.container video').css({
         'width':'130%'
     }),$('.skills video').css({
         'width':'130%'
@@ -121,7 +122,7 @@ if( dw > 1080){
         'font-size': '22px'
     }),$('header div ul li').css({
         'margin':'-20px 0 0 0',
-        'fontSize':'16px'
+        'fontSize':'14px'
     }),
     $('.profile').css({
         'width':'200px',
@@ -133,7 +134,7 @@ if( dw > 1080){
         'top': '0',
         'font-weight': 'bold',
         'border-radius': '50px'
-    }),$('.container div video').css({
+    }),$('.container video').css({
         'width':'150%'
     }),$('.skills video').css({
         'width':'150%'
@@ -159,7 +160,7 @@ if( dw > 1080){
         'font-size': '22px'
     }),$('header div ul li').css({
         'margin':'-20px 0 0 0',
-        'fontSize':'16px'
+        'fontSize':'12px'
     }),
     $('.profile').css({
         'width':'180px',
@@ -171,7 +172,7 @@ if( dw > 1080){
         'top': '0',
         'font-weight': 'bold',
         'border-radius': '50px'
-    }),$('.container div video').css({
+    }),$('.container video').css({
         'width':'150%'
     }),$('.skills video').css({
         'width':'150%'
@@ -203,7 +204,7 @@ if( dw > 1080){
         'margin-left':'-20px'
     }),$('header div ul li').css({
         'margin':'0 -10px 0 0 ',
-        'fontSize':'12px'
+        'fontSize':'10px'
     }),
     $('.profile').css({
         'width':'150px',
@@ -215,7 +216,7 @@ if( dw > 1080){
         'right':'10px',
         'font-weight': 'bold',
         'border-radius': '50px'
-    }),$('.container div video').css({
+    }),$('.container video').css({
         'width':'180%'
     }),$('.skills video').css({
         'width':'180%'
@@ -242,6 +243,8 @@ if( dw > 1080){
         'marginTop': '5px',
         'font-size': '16px',
         'margin-left':'-20px'
+    }),$('header').css({
+        paddingBottom: "0"
     }),$('header div ul li').css({
         'margin':'-15px -12px 0 0 ',
         'fontSize':'10px'
@@ -256,7 +259,7 @@ if( dw > 1080){
         'right':'10px',
         'font-weight': 'bold',
         'border-radius': '50%'
-    }),$('.container div video').css({
+    }),$('.container video').css({
         'width':'250%'
     }),$('.skills video').css({
         'width':'250%'
@@ -304,9 +307,11 @@ if( dw > 1080){
             'height':'40px'
         }),
     $('.logo').css({
-        'marginTop': '-5px',
+        'marginTop': '0',
         'font-size': '14px',
         'margin-left':'-20px'
+    }),$('header').css({
+        paddingBottom: "0"
     }),$('header div ul li').css({
         'margin':'22px 0 0 10px',
         'fontSize':'10px'
@@ -320,7 +325,7 @@ if( dw > 1080){
         'right':'calc(50% - 100px)',
         'font-weight': 'bold',
         'border-radius': '50%'
-    }),$('.container div video').css({
+    }),$('.container video').css({
         'width':'350%'
     }),$('.skills video').css({
         'width':'280%'
@@ -387,7 +392,7 @@ if( dw > 1080){
             'height':'40px'
         }),
     $('.logo').css({
-        'marginTop': '-10px',
+        'marginTop': '0',
         'font-size': '14px',
         'margin-left':'-20px'
     }),$('header div ul li').css({
@@ -406,7 +411,7 @@ if( dw > 1080){
         'right':'calc(50% - 85px)',
         'font-weight': 'bold',
         'border-radius': '50%'
-    }),$('.container div video').css({
+    }),$('.container video').css({
         'width':'450%'
     }),$('.skills video').css({
         'width':'450%'
@@ -510,8 +515,31 @@ if( dw > 1080){
     $(this).css({
         'transform': 'rotate(-360deg)'
     })
-   })
-console.log($('.conected').offset().top)
-  
-})
+   });
+$(".hiden-nav").click = function (e) {
+    e.stopPropagation();
+}
+
+   
+        
+         $(window).click = function (){
+            $(".sacand-nav").removeClass("visible")
+         }
+        
+$(".hiden-nav").click = function (e) {
+    e.stopPropagation();
+
+}
+$(".sacand-nav").click = function (e) {
+    e.stopPropagation();
+}
+    
+});
+
+  let body = document.querySelector("body");
+  let sacondNav = document.querySelector("..sacand-nav")
+  body.onclick = function (){
+    sacondNav.classList.remove("visible")
+  }
+
 
