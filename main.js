@@ -515,31 +515,22 @@ if( dw > 1080){
     $(this).css({
         'transform': 'rotate(-360deg)'
     })
-   });
-$(".hiden-nav").click = function (e) {
-    e.stopPropagation();
-}
-
    
-        
-         $(window).click = function (){
-            $(".sacand-nav").removeClass("visible")
-         }
-        
-$(".hiden-nav").click = function (e) {
-    e.stopPropagation();
+});
+setInterval(function () {
+    let imgesarray = ["01.jpg","02.jpg","03.jpg","04.jpg","05.jpg","06.jpg","07.jpg"];
+//change background imge url
+$("body").css({backgroundImage :'url("img/06.jpg")'});
+    let randomNum = Math.floor(Math.random() * imgesarray.length);
+    //change background imge url
+$("body").css({
+    backgroundImage : 'url("img/' + imgesarray[randomNum] + '")'
+});
+    console.log(randomNum)
+}, 50000);
 
-}
-$(".sacand-nav").click = function (e) {
-    e.stopPropagation();
-}
-    
+
 });
 
-  let body = document.querySelector("body");
-  let sacondNav = document.querySelector("..sacand-nav")
-  body.onclick = function (){
-    sacondNav.classList.remove("visible")
-  }
 
 
