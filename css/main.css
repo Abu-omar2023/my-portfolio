@@ -137,7 +137,6 @@ text-align:left ;
 }
 .container video{
     width: 100%;
-   
     position: absolute;
     top: 0;
     left: 0;
@@ -174,7 +173,7 @@ text-align:left ;
     position: absolute;
     right: 50px;
     bottom: 20px;
-    background-color: #ffffff0e;
+    background-color: #ffffff1c;
     border-radius: 20px;
     font-weight: bold;
     overflow: hidden;
