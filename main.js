@@ -25,6 +25,35 @@ $(document).ready(function(){
             })
         }
     });
+    // start my works
+      
+    $(window).scroll(function(){
+        if($(window).scrollTop() >= 1300 ){
+            $('.container5 div').css({
+                'width': '100px',
+                'height': '100px',
+                'transition': '.7s'
+                },1000),
+                $('.container5 div').css({
+                    'transform': 'rotate(720deg)',
+                    'transition': '.7s'
+                    },1000)
+            
+            
+        }else{
+            $('.container5 div').css({
+                'width': '100px',
+                'height': '100px',
+                'transition': '.7s'
+                },1000),
+                $('.container5 div').css({
+                    'transform': 'rotate(-720deg)',
+                    'transition': '.7s'
+                    },1000)
+        }
+    });
+
+    // end my works
     
     $('.hiden-nav').click(function(e){
         e.stopPropagation();
@@ -547,9 +576,9 @@ if( dw > 1080){
    
 });
 setInterval(function () {
-    let imgesarray = ["01.jpg","02.jpg","03.jpg","04.jpg","05.jpg","06.jpg","07.jpg","08.jpg","09.jpg","10.jpg","11.jpg"];
+    let imgesarray = ["01.jpg","02.jpg","03.jpg","04.jpg","05.jpg","06.jpg","07.jpg","08.jpg"];
 //change background imge url
-$("body").css({backgroundImage :'url("img/11.jpg")'});
+$("body").css({backgroundImage :'url("img/03.jpg")'});
     let randomNum = Math.floor(Math.random() * imgesarray.length);
     //change background imge url
 $("body").css({
@@ -558,7 +587,7 @@ $("body").css({
     console.log(randomNum)
 }, 50000);
 
-
+console.log($('.My-Works').offset())
 });
 
 
