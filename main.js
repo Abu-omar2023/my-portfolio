@@ -11,10 +11,13 @@ $(document).ready(function(){
     };
     $(window).scroll(function(){
         if($(window).scrollTop() >= 230 ){
-            $('.progress span:first-child').animate({
-                'width': '90%'
-            },1000);
-             $('.progress span:last-child').delay(1000).fadeIn(1000);
+            $('.progress span:first-child').each(function(){
+                $(this).animate({
+                      width: $(this).attr('data-progress') + '%'
+                },1000);
+                
+            },);
+            $('.progress span:last-child').delay(1000).fadeIn(1000);
             
         }else{
             $('.progress span:first-child').css({
@@ -23,10 +26,22 @@ $(document).ready(function(){
         }
     });
     
-    $('.hiden-nav').click(function(){
-        $('.sacand-nav').toggleClass('visible');
+    $('.hiden-nav').click(function(e){
+        e.stopPropagation();
+        $('.sacand-nav').addClass('visible');
 
- })
+ });
+ $('.sacand-nav').click(function(e){
+    e.stopPropagation();
+
+});
+document.addEventListener("click", (e) => {
+    if (e.target !== $('.hiden-nav') && e.target !== $('.sacand-nav')){
+        if ($('.sacand-nav').hasClass('visible')){
+            $('.sacand-nav').removeClass('visible');
+        }
+    }
+});
    
 $('header div ul li a').click(function(){
     $(this).addClass('link').parent().siblings().find('a').removeClass('link');
@@ -100,6 +115,8 @@ if( dw > 1080){
         'width':'130%'
     }),$('.skills video').css({
         'width':'130%'
+    }),$('.My-Works video').css({
+        'width':'130%'
     }),$('.container h2').css({
         'font-size':'35px',
         'margin-left':'50px'
@@ -138,6 +155,8 @@ if( dw > 1080){
         'width':'150%'
     }),$('.skills video').css({
         'width':'150%'
+    }),$('.My-Works video').css({
+        'width':'150%'
     }),$('.container h2').css({
         'font-size':'30px',
         'margin-left':'30px'
@@ -175,6 +194,8 @@ if( dw > 1080){
     }),$('.container video').css({
         'width':'150%'
     }),$('.skills video').css({
+        'width':'150%'
+    }),$('.My-Works video').css({
         'width':'150%'
     }),$('.container h2').css({
         'font-size':'27px',
@@ -220,6 +241,8 @@ if( dw > 1080){
         'width':'180%'
     }),$('.skills video').css({
         'width':'180%'
+    }),$('.My-Works video').css({
+        'width':'180%'
     }),$('.container h2').css({
         'font-size':'27px',
         'margin-left':'20px'
@@ -262,6 +285,8 @@ if( dw > 1080){
     }),$('.container video').css({
         'width':'250%'
     }),$('.skills video').css({
+        'width':'250%'
+    }),$('.My-Works video').css({
         'width':'250%'
     }),$('.skills div').css({
         'width':'90%',
@@ -329,6 +354,8 @@ if( dw > 1080){
         'width':'350%'
     }),$('.skills video').css({
         'width':'280%'
+    }),$('.My-Works video').css({
+        'width':'280%'
     }),$('.skills').css({
         'width':'calc(100% - 40px)',
         'height':'400px',
@@ -379,7 +406,7 @@ if( dw > 1080){
         'width':'30px',
         'height':'30px'
     }),$('.scrool i').css({
-        'font-size':'20px'
+        'font-size':'30px'
     }),$('.center').css({
         'font-size':'30px'
     })
@@ -414,6 +441,8 @@ if( dw > 1080){
     }),$('.container video').css({
         'width':'450%'
     }),$('.skills video').css({
+        'width':'450%'
+    }),$('.My-Works video').css({
         'width':'450%'
     }),$('.skills').css({
         'width':'calc(100% - 40px)',
@@ -468,7 +497,7 @@ if( dw > 1080){
         'width':'30px',
         'height':'30px'
     }),$('.scrool i').css({
-        'font-size':'20px'
+        'font-size':'30px'
     }),$('.center').css({
         'font-size':'28px'
     })
@@ -488,10 +517,10 @@ if( dw > 1080){
     })
    });
    $(window).scroll(function(){
-    if($(window).scrollTop() >= 800){
+    if($(window).scrollTop() >= 1200){
         
             $('.fa-yahoo, .fa-facebook, .fa-whatsapp').css({
-                'font-size': '60px',
+                'font-size': '80px',
                 'transition': '.7s'
                 },1000),
                 $('.fa-yahoo, .fa-facebook, .fa-whatsapp').css({
@@ -518,9 +547,9 @@ if( dw > 1080){
    
 });
 setInterval(function () {
-    let imgesarray = ["01.jpg","02.jpg","03.jpg","04.jpg","05.jpg","06.jpg","07.jpg"];
+    let imgesarray = ["01.jpg","02.jpg","03.jpg","04.jpg","05.jpg","06.jpg","07.jpg","08.jpg","09.jpg","10.jpg","11.jpg"];
 //change background imge url
-$("body").css({backgroundImage :'url("img/06.jpg")'});
+$("body").css({backgroundImage :'url("img/11.jpg")'});
     let randomNum = Math.floor(Math.random() * imgesarray.length);
     //change background imge url
 $("body").css({
