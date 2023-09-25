@@ -37,7 +37,8 @@ $(document).ready(function(){
                 $('.container5 div').css({
                     'transform': 'rotate(720deg)',
                     'transition': '.7s'
-                    },1000)
+                    },1000);
+                    $('..container5 p').delay(1000).fadeIn(1000);
             
             
         }else{

@@ -331,7 +331,7 @@ border: 3px solid aqua;
     position: absolute;
     bottom: -50px;
    text-align: center;
-  
+  display: none;
 }
 .container5 div a img{
     width: 100%;
