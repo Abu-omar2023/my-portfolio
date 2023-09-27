@@ -82,7 +82,7 @@ header ul {
 }
 .sacand-nav ul li:hover{
    
-    color: purple;
+    color: aqua;
     
 }
 .sacand-nav ul li a{
@@ -309,12 +309,12 @@ box-shadow: 5px 5px 15px 0 aquamarine;
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    background-color: #fff;
+    /* background-color: #fff; */
     color: #fff;
     display: inline-block;
 position: relative;
 margin: 20px;
-border: 3px solid aqua;
+border: 3px solid transparent;
 }
 .container5 div:hover {
     border-color: #fff;

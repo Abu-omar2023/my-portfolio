@@ -547,15 +547,15 @@ if( dw > 1080){
     })
    });
    $(window).scroll(function(){
-    if($(window).scrollTop() >= 1200){
+    if($(window).scrollTop() >= 1220){
         
             $('.fa-yahoo, .fa-facebook, .fa-whatsapp').css({
                 'font-size': '80px',
                 'transition': '.7s'
-                },1000),
+                },1500),
                 $('.fa-yahoo, .fa-facebook, .fa-whatsapp').css({
                     'transform': 'rotate(720deg)'
-                    },1000)
+                    },1500)
                 
                 }else{
         $('.fa-yahoo, .fa-facebook, .fa-whatsapp').css({
